@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import { render } from '@testing-library/react';
+import React, { Component } from 'react';
 import './App.css';
+import { STAFFS } from './shared/staffs';
+import { Navbar, NavbarBrand } from "reactstrap";
 
-function App() {
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    }
+  }
+
+render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Navbar dark color="primary">
+      <div className='container-fluid'>
+        <NavbarBrand href='/'>Ứng dụng quản lý nhân sự V1.0</NavbarBrand>
+      </div>
+    
+
+    </Navbar>
     </div>
-  );
+  )
 }
 
+}
 export default App;
