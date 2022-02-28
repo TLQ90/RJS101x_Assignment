@@ -39,6 +39,7 @@ class Staffs extends Component {
         if(this.state.selectedStaff === null) {
             return (
                 <p className="col-12 col-md-6 col-lg-4 mt-2">Bấm vào tên nhân viên để xem thông tin.</p> 
+               
             );
         }
         else {

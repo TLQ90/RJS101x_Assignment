@@ -19,12 +19,12 @@ render(){
       return (
         <div dark color="primary" >
       
-              <div className='container' >
+              <div className='container a' >
                 <Card href="/" text-white>ỨNG DỤNG QUẢN LÝ NHÂN SỰ V1.0</Card>
               </div>
-   
+   <div className="">
           <Staffs  staffs = {this.state.staffs} />
-      
+          </div>
         </div>
       );
     }
