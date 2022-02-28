@@ -1,31 +1,32 @@
-import { render } from '@testing-library/react';
+
 import React, { Component } from 'react';
 import './App.css';
 import { STAFFS } from './shared/staffs';
-import { Navbar, NavbarBrand } from "reactstrap";
+import { Card} from "reactstrap";
+import Staffs from './components/StaffListComponent';
 
 
 class App extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
-
-    }
+      staffs: STAFFS
+    };
   }
 
-render() {
-  return (
-    <div>
-    <Navbar dark color="primary">
-      <div className='container-fluid'>
-        <NavbarBrand href='/'>Ứng dụng quản lý nhân sự V1.0</NavbarBrand>
-      </div>
-    
-
-    </Navbar>
-    </div>
-  )
-}
-
-}
+render(){
+      return (
+        <div dark color="primary" >
+      
+              <div className='container' >
+                <Card href="/" text-white>ỨNG DỤNG QUẢN LÝ NHÂN SỰ V1.0</Card>
+              </div>
+   
+          <Staffs  staffs = {this.state.staffs} />
+      
+        </div>
+      );
+    }
+   }
 export default App;
