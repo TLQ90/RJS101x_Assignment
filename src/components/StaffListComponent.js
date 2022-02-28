@@ -38,7 +38,7 @@ class Staffs extends Component {
     renderHeader() {
         if(this.state.selectedStaff === null) {
             return (
-                <p className="col-12 col-md-6 col-lg-4 mt-2">Bấm vào tên nhân viên để xem thông tin.</p> 
+                <p className="col-12 col-md-6 col-lg-4 mt-2 text-danger">Bấm vào tên nhân viên để xem thông tin.</p> 
                
             );
         }
@@ -53,16 +53,16 @@ class Staffs extends Component {
     render() {
         const list = this.props.staffs.map((stf) => {
             return (
-                <div key={stf.id} className="col-12 col-md-6 col-lg-3 mt-2">
+                <div key={stf.id} className="col-12 col-md-6 col-lg-3 mt-2 ">
                     <Card onClick={() => this.onStaffSelect(stf)}>
-                        <CardText className='text-primary'>{stf.name}</CardText>
+                        <CardText className='text-info' >{stf.name}</CardText>
                     </Card>
                 </div>
             )
         });
         return (
             <div className='container'>
-                <div className='row'>
+                <div className='row' >
                     {list}
                     {this.renderHeader()}
                 </div>
